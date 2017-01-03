@@ -27,10 +27,10 @@ private final int creditScore;
 private final double loanAmount;
 
 @XmlElement
-private final int loanDuration;
+private final String loanDuration;
 
 
-public Result(String ssn, int creditScore,double loanAmount, int loanDuration){
+public Result(String ssn, int creditScore,double loanAmount, String loanDuration){
 this.ssn = ssn;
 this.creditScore = creditScore;
 this.loanAmount = loanAmount;
@@ -39,10 +39,10 @@ this.loanDuration = loanDuration;
 
 
 private Result(){
-this.ssn = null;
+this.ssn = "";
 this.creditScore = 0;
 this.loanAmount = 0;
-this.loanDuration = 0;
+this.loanDuration = "";
 }
 
 public static Result newInstance() {
